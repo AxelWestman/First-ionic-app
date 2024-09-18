@@ -1,20 +1,28 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <ion-menu  contentId="main-content">
+    <ion-header >
+      <ion-toolbar color="myColor">
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ml-11 !important">
+      <ul class="mt-5">
+        <li class="w-full  h-auto flex items-center"><ion-icon class="text-3xl ml-5 text-black" name="home"></ion-icon><p class="text-xl ml-5">Inicio</p></li>
+        <li class="w-full  h-auto mt-3 flex items-center"><ion-icon class="text-3xl ml-5 text-black" name="people"></ion-icon><p class="ml-5 text-xl">Customers</p></li>
+      </ul>
+    </ion-content>
+  </ion-menu>
+  <div id="main-content">
+    <ion-header class="bg-black h-lvh">
+      <ion-toolbar color="myColor">
+        <ion-buttons  slot="start">
+          <ion-menu-button class="text-black"></ion-menu-button>
+        </ion-buttons>
+        <ion-title class="text-black">Inicio</ion-title>
+      </ion-toolbar>
+      <ion-button [routerLink]="['/customers']">Go to customers</ion-button>
+    </ion-header>
   </div>
+
+  
 </ion-content>
